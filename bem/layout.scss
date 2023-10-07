@@ -1,0 +1,38 @@
+@use 'variaveis';
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+#header {
+  height: 100px;
+  background-color: variaveis.$backgroundHeader;
+}
+
+#header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header li {
+  display: inline;
+  margin-left: 8px;
+  a {
+    color: variaveis.$colorHeader;
+    text-decoration: none;
+    &:hover {
+      border-radius: 25px;
+      background-color: variaveis.$backgroundDestaque;
+      color: variaveis.$colorHeader;
+    }
+  }
+}
+
+.produtos {
+  max-width: 640px;
+  width: 100%;
+  margin: 56px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-column-gap: 1%;
+}
